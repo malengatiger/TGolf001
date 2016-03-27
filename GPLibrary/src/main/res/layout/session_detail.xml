@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/mon_wide"
+    android:layout_marginLeft="@dimen/mon_margin"
+    android:layout_marginTop="@dimen/mon_margin">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/number"
+            style="@style/BlackCircleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0" />
+
+        <RelativeLayout
+            android:id="@+id/nameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/number">
+
+            <TextView
+                android:id="@+id/golfCourse"
+                style="@style/Title3TextStyleBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/mon_margin"
+                android:text="GolfCourse Name Here" />
+
+            <TextView
+                android:id="@+id/days"
+                style="@style/TextStyleBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/golfCourse"
+                android:layout_marginTop="@dimen/mon_padding"
+                android:text="wednesday, 30 December 2056 12:35"
+                android:textColor="@color/blue_400" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/detailLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nameLayout"
+            android:layout_marginTop="@dimen/mon_margin"
+            android:layout_toRightOf="@id/number">
+
+            <RelativeLayout
+                android:id="@+id/holeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/holeCount"
+                    style="@style/GreenCircleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0" />
+
+                <TextView
+                    android:id="@+id/holeCountLabel"
+                    style="@style/TextStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/mon_margin"
+                    android:layout_toRightOf="@id/holeCount"
+                    android:text="Number of Holes" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/strokeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/holeLayout"
+                android:layout_marginTop="@dimen/mon_padding">
+
+                <TextView
+                    android:id="@+id/strokes"
+                    style="@style/GreyCircleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0" />
+
+                <TextView
+                    android:id="@+id/strokesLabel"
+                    style="@style/TextStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/mon_margin"
+                    android:layout_toRightOf="@id/strokes"
+                    android:text="Number of Strokes" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/underParLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/strokeLayout"
+                android:layout_marginTop="@dimen/mon_padding">
+
+                <TextView
+                    android:id="@+id/underPar"
+                    style="@style/RedCircleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0" />
+
+                <TextView
+                    android:id="@+id/underLabel"
+                    style="@style/TextStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/mon_margin"
+                    android:layout_toRightOf="@id/underPar"
+                    android:text="Number of Holes Under Par" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/parLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/underParLayout"
+                android:layout_marginTop="@dimen/mon_padding">
+
+                <TextView
+                    android:id="@+id/par"
+                    style="@style/BlackCircleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="E" />
+
+                <TextView
+                    android:id="@+id/parLabel"
+                    style="@style/TextStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/mon_margin"
+                    android:layout_toRightOf="@id/par"
+                    android:text="Number of Holes Par" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/overparLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/parLayout"
+                android:layout_marginTop="@dimen/mon_padding">
+
+                <TextView
+                    android:id="@+id/overpar"
+                    style="@style/BlueCircleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="E" />
+
+                <TextView
+                    android:id="@+id/overparLabel"
+                    style="@style/TextStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/mon_margin"
+                    android:layout_toRightOf="@id/overpar"
+                    android:text="Number of Holes Over Par" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mistakesLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/overparLayout"
+                android:layout_marginTop="@dimen/mon_padding">
+
+                <TextView
+                    android:id="@+id/mistakes"
+                    style="@style/OrangeCircleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="E" />
+
+                <TextView
+                    android:id="@+id/mistakeLabel"
+                    style="@style/TextStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/mon_margin"
+                    android:layout_toRightOf="@id/mistakes"
+                    android:text="Mistakes" />
+
+                <Button
+                    android:id="@+id/btnClose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/mon_margin"
+                    android:text="Close Session" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</ScrollView>

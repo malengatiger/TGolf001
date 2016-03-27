@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.boha.golfpractice.golfer">
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- DEBUG KEY: AIzaSyDfG9K7XcN97tl3uQpm1194Xn1eaZT_MLc -->
+    <!-- PROD KEY: AIzaSyCgYFuzzP2Pz2ycziCpgO5mz6YMCy58BoU -->
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/golfball48"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/TealTheme">
+
+        <!-- Keys and metadata -->
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyDfG9K7XcN97tl3uQpm1194Xn1eaZT_MLc" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <activity
+            android:name=".app.activities.LoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:theme="@style/TealTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".app.activities.PlayerMainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".app.activities.CoachMainActivity"
+            android:label="@string/title_activity_coach_main"></activity>
+    </application>
+
+</manifest>

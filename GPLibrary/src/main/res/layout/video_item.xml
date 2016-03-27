@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/mon_padding"
+    app:cardCornerRadius="@dimen/mon_divider"
+    app:cardElevation="@dimen/mon_padding">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.youtube.player.YouTubeThumbnailView
+            android:id="@+id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/mon_divider"
+            android:src="@drawable/ic_videocam_black_36dp" />
+
+        <RelativeLayout
+            android:id="@+id/top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/mon_margin"
+            android:layout_toRightOf="@id/icon">
+
+            <RelativeLayout
+                android:id="@+id/projLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/number"
+                    style="@style/BlackCircleSmall"
+                    android:text="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/title"
+                    style="@style/TextStyleBold"
+                    android:layout_toRightOf="@id/number"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/mon_margin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Project Name Here" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/subtitle"
+                style="@style/TextStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/projLayout"
+                android:textColor="@color/blue_400"
+
+                android:layout_marginTop="@dimen/mon_padding"
+                android:text="Date of Video and other possible data" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,167 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/mon_padding"
+    android:gravity="center_horizontal"
+    app:cardCornerRadius="@dimen/mon_divider"
+    app:cardElevation="@dimen/mon_padding"
+    tools:context=".app.activities.LoginActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Login progress -->
+        <ProgressBar
+            android:id="@+id/login_progress"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="8dp"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/hero"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mon_hero_height_small"
+            android:scaleType="centerCrop"
+            android:src="@drawable/back6" />
+
+        <TextView
+            android:id="@+id/name"
+            style="@style/Title2TextStyleWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/mon_margin"
+            android:text="GolfPractice" />
+
+        <ScrollView
+            android:id="@+id/login_form"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/hero">
+
+            <RelativeLayout
+                android:id="@+id/email_login_form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/mon_margin"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/title"
+                    style="@style/Title1TextStyleBlack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/mon_margin"
+                    android:text="Welcome Aboard" />
+
+                <TextView
+                    android:id="@+id/subtitle"
+                    style="@style/TextStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/title"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/mon_margin"
+                    android:text="Welcome Aboard the best Golf practice app on earth!" />
+
+
+                <AutoCompleteTextView
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/subtitle"
+                    android:layout_marginTop="@dimen/mon_margin"
+                    android:hint="Enter Email Address"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/emailLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/email"
+                    android:layout_marginTop="@dimen/mon_padding">
+
+                    <EditText
+                        android:id="@+id/password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter Password"
+                        android:inputType="textPassword" />
+                </android.support.design.widget.TextInputLayout>
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_marginTop="@dimen/mon_margin"
+                    android:layout_width="match_parent"
+                    android:padding="@dimen/mon_padding"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/emailLayout"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioPlayer"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Golfer" />
+
+                    <RadioButton
+                        android:id="@+id/radioCoach"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Coach" />
+
+                </RadioGroup>
+                <RadioGroup
+                    android:id="@+id/radioGroup2"
+                    android:layout_marginTop="@dimen/mon_margin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/mon_padding"
+                    android:layout_below="@id/radioGroup"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioOld"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Existing Account" />
+
+                    <RadioButton
+                        android:id="@+id/radioNew"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="New Account" />
+
+                </RadioGroup>
+
+                <Button
+                    android:id="@+id/btnSignIn"
+                    style="?android:textAppearanceSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/radioGroup2"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/green_500"
+                    android:elevation="@dimen/mon_padding"
+                    android:text="Sign In"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

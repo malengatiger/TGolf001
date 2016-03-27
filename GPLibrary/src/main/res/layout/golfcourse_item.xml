@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/mon_padding"
+    app:cardCornerRadius="@dimen/mon_divider"
+    app:cardElevation="@dimen/mon_divider">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/actionsLayout"
+            android:layout_marginTop="@dimen/mon_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/iconDirections"
+                android:src="@drawable/ic_directions_black_24dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/mon_margin"
+                android:tint="?attr/colorPrimaryDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/iconSessions"
+                android:src="@drawable/ic_search_black_24dp"
+                android:layout_toLeftOf="@id/iconDirections"
+                android:layout_marginRight="@dimen/mon_wide"
+                android:tint="?attr/colorPrimaryDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/iconStartSession"
+                android:src="@drawable/ic_add_black_24dp"
+                android:layout_toLeftOf="@id/iconSessions"
+                android:layout_marginRight="@dimen/mon_wide"
+                android:tint="?attr/colorPrimaryDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/actionsLayout"
+            android:layout_margin="@dimen/mon_margin">
+
+            <TextView
+                android:id="@+id/number"
+                style="@style/BlueCircleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1" />
+
+            <TextView
+                android:id="@+id/courseName"
+                style="@style/Title3TextStyleBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/mon_margin"
+                android:layout_toRightOf="@id/number"
+                android:text="GolfCourese Here" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/top"
+            android:layout_margin="@dimen/mon_margin">
+
+            <TextView
+                android:id="@+id/distance"
+                style="@style/Title3TextStyleRed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="6.89 KM" />
+
+            <TextView
+                android:id="@+id/distLabel"
+                style="@style/TextStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/mon_margin"
+                android:layout_toLeftOf="@id/distance"
+                android:text="Distance in KM, as crow flies"
+                android:textColor="@color/grey_500" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
